@@ -1,4 +1,4 @@
-class Coordinates {
+class Location {
   // TODO: fill this
   // String id;
   // int latitude;
