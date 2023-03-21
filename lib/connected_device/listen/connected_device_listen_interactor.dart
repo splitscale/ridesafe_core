@@ -1,16 +1,15 @@
 import '../../services/connected_device_service.dart';
-import '../../services/payload/service_payload.dart';
 
 class ConnectDeviceListenInteractor {
   final ConnectedDeviceService _service;
 
   ConnectDeviceListenInteractor(this._service);
 
-  Stream<ServicePayload> startListening() {
+  Stream<String> startListening() {
     return _service.startListening();
   }
 
-  void stopListening() {
+  Future<void> stopListening() {
     return _service.stopListening();
   }
 }

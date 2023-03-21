@@ -2,7 +2,7 @@
 class ServicePayload<T> {
   final T _payload;
 
-  ServicePayload(this._payload);
+  ServicePayload(T payload) : _payload = payload;
 
   T get payload => _payload;
 }

@@ -7,5 +7,5 @@ class ConnectedDevice<T> extends Device {
   ConnectedDevice.fromDevice(Device device, this._conn)
       : super(device.name, device.address);
 
-  T get conn => _conn;
+  T get connection => _conn;
 }

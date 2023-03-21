@@ -1,14 +1,12 @@
-import 'package:ridesafe_core/services/payload/service_payload.dart';
-
 abstract class ConnectedDeviceService {
   /// `throws ServiceException` when  attempt fails
-  Future<void> send(ServicePayload payload);
+  Future<void> send(String json);
 
   /// `throws ServiceException` when  attempt fails
-  Stream<ServicePayload> startListening();
+  Stream<String> startListening();
 
   /// `throws ServiceException` when  attempt fails
-  void stopListening();
+  Future<void> stopListening();
 
   /// `throws ServiceException` when  attempt fails
   bool get isConnected;
