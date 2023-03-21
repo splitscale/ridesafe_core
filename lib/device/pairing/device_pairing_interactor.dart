@@ -1,3 +1,5 @@
+import 'package:ridesafe_core/device/device.dart';
+
 import '../../services/device_service.dart';
 
 class DevicePairingInteractor {
@@ -5,11 +7,11 @@ class DevicePairingInteractor {
 
   DevicePairingInteractor(this._service);
 
-  Future<bool> pair(String deviceMacAddress, String pin) {
-    return _service.pair(deviceMacAddress, pin);
+  Future<bool> pair(Device device, String pin) {
+    return _service.pair(device, pin);
   }
 
-  Future<bool> isPaired(String deviceMacAddress) {
-    return _service.isPaired(deviceMacAddress);
+  Future<bool> isPaired(Device device) {
+    return _service.isPaired(device);
   }
 }

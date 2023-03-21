@@ -13,13 +13,13 @@ abstract class DeviceService {
   Future<void> stopScanning();
 
   /// `throws ServiceException` when  attempt fails
-  Future<bool> pair(String deviceMacAddress, String pin);
+  Future<bool> pair(Device device, String pin);
 
   /// `throws ServiceException` when attempt fails
-  Future<bool> isPaired(String deviceMacAddress);
+  Future<bool> isPaired(Device device);
 
   /// `throws ServiceException` when  attempt fails
-  Future<ConnectedDevice> connect(String deviceMacAddress);
+  Future<ConnectedDevice> connect(Device device);
 
   /// Checks if the device HAD the specified service
   ///
@@ -35,4 +35,14 @@ abstract class DeviceService {
   ///
   /// `throws ServiceException` when  attempt fails
   Future<ServiceStatus> getServiceState();
+
+  /// Attempt to enable the service
+  ///
+  /// `throws ServiceException` when  attempt fails
+  Future<void> enableService();
+
+  /// Attempt to open the device settings
+  ///
+  /// `throws ServiceException` when  attempt fails
+  Future<void> openInternalSettings();
 }

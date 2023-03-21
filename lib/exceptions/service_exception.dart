@@ -1,3 +1,6 @@
 import 'dart:io';
 
-class ServiceException extends IOException {}
+class ServiceException implements IOException {
+  final String cause;
+  ServiceException(String message) : cause = '[ServiceException] $message';
+}

@@ -1,3 +1,7 @@
 import 'dart:io';
 
-class RepositoryException extends IOException {}
+class RepositoryException implements IOException {
+  final String cause;
+  RepositoryException(String message)
+      : cause = '[RepositoryException] $message';
+}

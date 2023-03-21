@@ -4,13 +4,13 @@ class Device {
 
   Device(this._name, this._address);
 
-  String get getName => _name;
+  String get name => _name;
 
   set setName(String name) {
     _name = name;
   }
 
-  String get getAddress => _address;
+  String get address => _address;
 
   set setAddress(String address) {
     _address = address;
