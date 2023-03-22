@@ -1,10 +1,7 @@
-import 'package:ridesafe_core/services/payload/service_payload.dart';
-import 'package:ridesafe_core/services/state/service_state.dart';
-
-abstract class PermissionService {
+abstract class PermissionService<R1, R2> {
   /// `throws ServiceException` when attempt fails
-  Future<ServicePayload> request();
+  R1 request();
 
   /// `throws ServiceException` when attempt fails
-  Future<ServiceState> get state;
+  R2 get state;
 }
