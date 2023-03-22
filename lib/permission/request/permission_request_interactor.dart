@@ -1,13 +1,11 @@
 import 'package:ridesafe_core/services/permission_service.dart';
 
-import '../../services/payload/service_payload.dart';
-
-class PermissionRequestInteractor {
+class PermissionRequestInteractor<R1> {
   final PermissionService _service;
 
   PermissionRequestInteractor(this._service);
 
-  Future<ServicePayload> request() {
+  R1 request() {
     return _service.request();
   }
 }
