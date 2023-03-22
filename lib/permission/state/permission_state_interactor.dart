@@ -1,10 +1,10 @@
 import '../../services/permission_service.dart';
 import '../../services/state/service_state.dart';
 
-class PermissionStatusInteractor {
+class PermissionStateInteractor {
   final PermissionService _service;
 
-  PermissionStatusInteractor(this._service);
+  PermissionStateInteractor(this._service);
 
   Future<ServiceState> get status {
     return _service.state;
