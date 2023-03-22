@@ -3,8 +3,8 @@ import 'package:ridesafe_core/device/device.dart';
 import '../../services/device_service.dart';
 import '../../connected_device/connected_device.dart';
 
-class ConnectDeviceInteractor<CONN> {
-  final DeviceService<void, CONN> _service;
+class ConnectDeviceInteractor<R1, CONN> {
+  final DeviceService<R1, CONN> _service;
 
   ConnectDeviceInteractor(this._service);
 
