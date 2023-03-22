@@ -1,7 +1,7 @@
 import '../connected_device/connected_device.dart';
 import '../device/device.dart';
 
-abstract class DeviceService<R1> {
+abstract class DeviceService<R1, CONN> {
   /// `throws ServiceException` when attempt fails
   Future<List<Device>> getPairedDevices();
 
@@ -18,7 +18,7 @@ abstract class DeviceService<R1> {
   Future<bool> isPaired(Device device);
 
   /// `throws ServiceException` when  attempt fails
-  Future<ConnectedDevice> connect(Device device);
+  Future<ConnectedDevice<CONN>> connect(Device device);
 
   /// Checks if the device HAD the specified service
   ///

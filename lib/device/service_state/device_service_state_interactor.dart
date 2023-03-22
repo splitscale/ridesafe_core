@@ -1,7 +1,7 @@
 import '../../services/device_service.dart';
 
 class DeviceServiceStateInteractor<R1> {
-  final DeviceService<R1> _service;
+  final DeviceService<R1, void> _service;
 
   DeviceServiceStateInteractor(this._service);
 
