@@ -1,8 +1,7 @@
 import '../../services/device_service.dart';
-import '../../services/state/service_state.dart';
 
-class DeviceServiceStateInteractor {
-  final DeviceService _service;
+class DeviceServiceStateInteractor<R1> {
+  final DeviceService<R1> _service;
 
   DeviceServiceStateInteractor(this._service);
 
@@ -14,7 +13,7 @@ class DeviceServiceStateInteractor {
     return _service.isServiceEnabled();
   }
 
-  Future<ServiceState> getServiceState() {
+  R1 getServiceState() {
     return _service.getServiceState();
   }
 }
