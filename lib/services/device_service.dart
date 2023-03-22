@@ -1,6 +1,7 @@
+import 'package:ridesafe_core/services/state/service_state.dart';
+
 import '../connected_device/connected_device.dart';
 import '../device/device.dart';
-import 'state/service_state.dart';
 
 abstract class DeviceService {
   /// `throws ServiceException` when attempt fails
@@ -34,7 +35,7 @@ abstract class DeviceService {
   /// Checks specified service state
   ///
   /// `throws ServiceException` when  attempt fails
-  Future<ServiceStatus> getServiceState();
+  Future<ServiceState> getServiceState();
 
   /// Attempt to enable the service
   ///

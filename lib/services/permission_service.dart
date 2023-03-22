@@ -6,5 +6,5 @@ abstract class PermissionService {
   Future<ServicePayload> request();
 
   /// `throws ServiceException` when attempt fails
-  Future<ServiceStatus> get status;
+  Future<ServiceState> get state;
 }

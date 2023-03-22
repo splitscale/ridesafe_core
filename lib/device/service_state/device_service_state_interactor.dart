@@ -14,7 +14,7 @@ class DeviceServiceStateInteractor {
     return _service.isServiceEnabled();
   }
 
-  Future<ServiceStatus> getServiceState() {
+  Future<ServiceState> getServiceState() {
     return _service.getServiceState();
   }
 }

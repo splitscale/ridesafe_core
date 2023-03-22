@@ -1,7 +1,7 @@
-class ServiceStatus<T> {
+class ServiceState<T> {
   final T _status;
 
-  ServiceStatus(this._status);
+  ServiceState(this._status);
 
   T get status => _status;
 }
