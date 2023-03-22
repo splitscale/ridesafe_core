@@ -1,7 +1,9 @@
-abstract class PermissionService<R1, R2> {
+import 'package:ridesafe_core/permission/basic_permission.dart';
+
+abstract class PermissionService {
   /// `throws ServiceException` when attempt fails
-  R1 request();
+  Future<void> request();
 
   /// `throws ServiceException` when attempt fails
-  R2 get state;
+  BasicPermission get state;
 }

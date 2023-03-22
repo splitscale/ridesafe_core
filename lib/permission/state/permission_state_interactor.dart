@@ -1,11 +1,12 @@
 import '../../services/permission_service.dart';
+import '../basic_permission.dart';
 
-class PermissionStateInteractor<R2> {
+class PermissionStateInteractor {
   final PermissionService _service;
 
   PermissionStateInteractor(this._service);
 
-  R2 get status {
+  BasicPermission get status {
     return _service.state;
   }
 }
