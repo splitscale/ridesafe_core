@@ -5,7 +5,7 @@ class ConnectDeviceStateInteractor {
 
   ConnectDeviceStateInteractor(this._service);
 
-  Future<void> disconnect() {
-    return _service.disconnect();
+  bool get isConnected {
+    return _service.isConnected;
   }
 }
