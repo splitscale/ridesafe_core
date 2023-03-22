@@ -5,5 +5,5 @@ abstract class PermissionService {
   Future<void> request();
 
   /// `throws ServiceException` when attempt fails
-  BasicPermission get state;
+  Future<BasicPermission> get state;
 }

@@ -6,7 +6,7 @@ class PermissionStateInteractor {
 
   PermissionStateInteractor(this._service);
 
-  BasicPermission get status {
+  Future<BasicPermission> get status {
     return _service.state;
   }
 }
